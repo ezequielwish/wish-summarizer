@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "./page.module.css";
+import { FaGithub } from "react-icons/fa";
 
 export default function Home() {
     return (
@@ -24,7 +25,16 @@ export default function Home() {
                 </form>
             </main>
             <footer className={styles.footer}>
-                <p>© 2025 Wish Summarizer</p>
+                <span className={styles.footerText}>
+                    <a
+                        href="https://github.com/ezequielwish/wish-summarizer"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        © 2025 Wish Summarizer
+                    </a>
+                    <FaGithub />
+                </span>
             </footer>
         </div>
     );
