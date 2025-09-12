@@ -2,13 +2,14 @@
 
 import styles from "./page.module.css";
 import { FaGithub } from "react-icons/fa";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Home() {
     const [summarizedWishes, setSummarizedWishes] = useState("");
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setSummarizedWishes("");
         const formData = new FormData(e.target);
         const wishes = formData.get("wishes");
 
