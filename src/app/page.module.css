@@ -33,7 +33,16 @@
     width: 100%;
 }
 
-.button {
+.buttonContainer {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.summaryButton, .cleanButton {
+    width: auto;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -46,13 +55,31 @@
     cursor: pointer;
     user-select: none;
     color: var(--foreground);
-    background-color: #585858;
     transition: background-color 0.2s, border-color 0.2s, color 0.2s;
 }
 
-.button:hover {
+.summaryButton {
+    flex: 0 0 80%;
+    background-color: #585858;
+}
+
+.cleanButton {
+    flex: 0 0 20%;
+    background-color: #5f1717;
+}
+
+
+
+.summaryButton:hover, .clearButtoin:hover {
     text-decoration: none;
+}
+
+.summaryButton:hover {
     background-color: #919191;
+}
+
+.cleanButton:hover {
+    background-color: #a72323;
 }
 
 .textarea {
